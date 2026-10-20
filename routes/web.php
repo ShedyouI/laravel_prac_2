@@ -12,3 +12,11 @@ Route::get('/array', [MainController::class, 'showArray'])->name('array');
 Route::get('/array/shuffle', [MainController::class, 'shuffleArray'])->name('array.shuffle');
 Route::get('/array/sort', [MainController::class, 'sortArray'])->name('array.sort');
 Route::get('/array/filter', [MainController::class, 'filterArray'])->name('array.filter');
+
+Route::get('/orders', function () {
+    return view('order.index');
+})->name('orders.index');
+
+Route::get('/orders/create', function () {
+    return view('order.create');
+})->name('orders.create');
